@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="14.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="7.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TaskManagement.Api.Domain\TaskManagement.Api.Domain.csproj" />
+    <ProjectReference Include="..\TaskManagement.Api.Infra.Data\TaskManagement.Api.Infra.Data.csproj" />
+    <ProjectReference Include="..\TaskManagement.Api.Infra.IO\TaskManagement.Api.Infra.IO.csproj" />
+  </ItemGroup>
+
+</Project>
