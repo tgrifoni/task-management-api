@@ -340,3 +340,4 @@ ASALocalRun/
 healthchecksdb
 /TaskManagement.Api/critical-updates.txt
 /TaskManagement.Api/logs.txt
+/TaskManagement.Api/TaskManagement.db
