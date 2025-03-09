@@ -1,3 +1,3 @@
 ﻿namespace TaskManagement.Api.Models.Task;
 
-public record GetTasksResponse(IEnumerable<ExternalTaskDto> Tasks);
+public record GetTasksResponse(IEnumerable<InternalTaskDto> Tasks);

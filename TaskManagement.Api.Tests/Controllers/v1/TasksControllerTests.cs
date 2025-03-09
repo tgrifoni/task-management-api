@@ -27,7 +27,7 @@ public class TasksControllerTests
           .Setup(mediator => mediator.Send(It.IsAny<IRequest<Domain.Queries.v1.Task.GetTasksResponse>>(), It.IsAny<CancellationToken>()))
           .ReturnsAsync(It.IsAny<Domain.Queries.v1.Task.GetTasksResponse>());
 
-      var response = new GetTasksResponse(Tasks: [new ExternalTaskDto()]);
+      var response = new GetTasksResponse(Tasks: [new InternalTaskDto()]);
       _mapperMock
           .Setup(mapper => mapper.Map<GetTasksResponse>(It.IsAny<Domain.Queries.v1.Task.GetTasksResponse>()))
           .Returns(response);
@@ -62,9 +62,9 @@ public class TasksControllerTests
           .Setup(mediator => mediator.Send(It.IsAny<IRequest<Domain.Queries.v1.Task.GetTaskResponse>>(), It.IsAny<CancellationToken>()))
           .ReturnsAsync(response);
 
-      var task = new ExternalTaskDto();
+      var task = new InternalTaskDto();
       _mapperMock
-          .Setup(mapper => mapper.Map<ExternalTaskDto>(response.Task))
+          .Setup(mapper => mapper.Map<InternalTaskDto>(response.Task))
           .Returns(task);
 
       var result = await _tasksController.Get(id: default) as OkObjectResult;

@@ -25,7 +25,7 @@ public class TasksController(IMapper mapper, IMediator mediator) : ControllerBas
    }
 
    [HttpGet("{id}")]
-   [ProducesResponseType<ExternalTaskDto>(StatusCodes.Status200OK, MediaTypeNames.Application.Json)]
+   [ProducesResponseType<InternalTaskDto>(StatusCodes.Status200OK, MediaTypeNames.Application.Json)]
    [ProducesResponseType<ProblemDetails>(StatusCodes.Status404NotFound, MediaTypeNames.Application.Json)]
    public async Task<IActionResult> Get(int id)
    {
@@ -35,7 +35,7 @@ public class TasksController(IMapper mapper, IMediator mediator) : ControllerBas
          return Problem(detail: "The specified user could not be found.", statusCode: StatusCodes.Status404NotFound);
       }
 
-      var task = mapper.Map<ExternalTaskDto>(response.Task);
+      var task = mapper.Map<InternalTaskDto>(response.Task);
       return Ok(task);
    }
 
