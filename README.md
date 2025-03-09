@@ -59,14 +59,14 @@ dotnet build
 ```
 
 ## Running the project
-### Using Command Line Interface (CLI)
+### Option 1: Using Command Line Interface (CLI)
 To run the project using the CLI, execute the following command in the project directory:
 ```bash
 dotnet run --project .\TaskManagement.Api\TaskManagement.Api.csproj
 ```
 The API will start, and you should see output indicating that it's running on a specific URL, typically `http://localhost:5000` or similar.
 
-### Using an Integrated Development Environment (IDE)
+### Option 2: Using an Integrated Development Environment (IDE)
 If you prefer using an IDE such as Visual Studio or Visual Studio Code, follow these steps:
 
 1. **Open the project**: Open your preferred IDE and load the project by selecting the `TaskManagement.sln` solution.
