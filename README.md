@@ -5,18 +5,22 @@ This project is a .NET 9 API for a task management system with a specific set of
 The system allows users to create, update, delete, and retrieve tasks.
 It includes custom middleware that logs every API request, including method type and endpoint, into a file.
 When a task with "High" priority is created or updated, an event is triggered that logs it separately as a critical update.
-The project is secured using JWT authentication, designed very in a very basic way for demonstration purposes only, and not production-ready. 
+The project is secured using JWT authentication, designed in a very basic way for demonstration purposes only, and not production-ready. 
 
 Unit and integration tests are implemented using xUnit and Moq.
 The system uses SQLite for data persistence, creating/initialising a file when the API starts and deleting it upon application shutdown.
 Additionally, the project utilizes AutoMapper, MediatR, Dapper, and OpenAPI/Swagger to enhance functionality.
 
 ## Prerequisites
+Before setting up the project, ensure you have the following installed:
 - **.NET 9 SDK**: You can download and install it from the [official .NET website](https://dotnet.microsoft.com/download/dotnet/9.0).
+
+If you want to follow [Option 1](#option-1-cloning-the-repository), you'll need the following installed:
 - **Git**: You need Git installed to clone the repository. You can download it from [here](https://git-scm.com/downloads).
 
 ## Setup Instructions
-### Option 1: Cloning the repository
+### Step 1: Installation
+#### Option 1: Cloning the repository
 If you prefer to clone the repository, follow these steps:
 
 1. **Clone the repository**
@@ -44,17 +48,17 @@ If you prefer to download the files directly, follow these steps:
     ```
     Replace `path-to-extracted-directory` with the actual path where you extracted the files.
 
-### Step 3: Install .NET SDK (if not already installed)
+### Step 2: Install .NET SDK (if not already installed)
 If you don't have the .NET 9 SDK installed, download and install it from the [official .NET website](https://dotnet.microsoft.com/download/dotnet/9.0). Follow the installation instructions provided on the website.
 
-### Step 4: Build the Project
+### Step 3: Build the project
 Now, build the project to restore dependencies and compile the code.
 Run the following command in the terminal:
 ```bash
 dotnet build
 ```
 
-## Running the Project
+## Running the project
 ### Using Command Line Interface (CLI)
 To run the project using the CLI, execute the following command in the project directory:
 ```bash
@@ -72,6 +76,7 @@ If you prefer using an IDE such as Visual Studio or Visual Studio Code, follow t
 ### General guidelines
 - You can also navigate to the Swagger page by adding `/swagger` to the end of the URL.
 - To log in, you can use the `admin` username and `password` password to generate an access token. Any other combination will result in an `401 Unauthorized` response.
+- The access token is set to expire in 120 seconds (2 minutes). You can change it by editing the amount of seconds in the `appsettings.json` file, under `Jwt__SecondsToExpire`.
 
 ## Troubleshooting
 If you encounter any issues during setup or running the project, check the following:
