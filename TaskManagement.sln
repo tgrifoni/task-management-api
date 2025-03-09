@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagement.Api.Domain",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagement.Api.Infra.Data", "TaskManagement.Api.Infra.Data\TaskManagement.Api.Infra.Data.csproj", "{61309571-764C-4CB4-8031-9A1AFF6D3BDB}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TaskManagement.Api.Infra.Database", "TaskManagement.Api.Infra.Database\TaskManagement.Api.Infra.Database.sqlproj", "{E2D915EE-708B-4EE6-9F92-B6C91E499814}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagement.Api.Infra.IO", "TaskManagement.Api.Infra.IO\TaskManagement.Api.Infra.IO.csproj", "{0C136E36-0685-49EF-A88D-F34780F237DD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagement.Api.Domain.Tests", "TaskManagement.Api.Domain.Tests\TaskManagement.Api.Domain.Tests.csproj", "{F2BD46C1-87CC-4FCF-9A5B-CC83C942CB11}"
@@ -37,12 +35,6 @@ Global
 		{61309571-764C-4CB4-8031-9A1AFF6D3BDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61309571-764C-4CB4-8031-9A1AFF6D3BDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61309571-764C-4CB4-8031-9A1AFF6D3BDB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E2D915EE-708B-4EE6-9F92-B6C91E499814}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E2D915EE-708B-4EE6-9F92-B6C91E499814}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E2D915EE-708B-4EE6-9F92-B6C91E499814}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{E2D915EE-708B-4EE6-9F92-B6C91E499814}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E2D915EE-708B-4EE6-9F92-B6C91E499814}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E2D915EE-708B-4EE6-9F92-B6C91E499814}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{0C136E36-0685-49EF-A88D-F34780F237DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0C136E36-0685-49EF-A88D-F34780F237DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C136E36-0685-49EF-A88D-F34780F237DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
